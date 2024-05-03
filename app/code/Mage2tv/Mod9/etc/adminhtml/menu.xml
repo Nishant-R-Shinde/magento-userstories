@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Mage2tv_Mod9::custom_menu"
+             title="Custom Menu"
+             module="Mage2tv_Mod9"
+             sortOrder="10"
+             resource="Mage2tv_Mod9::custom_menu"/>
+        <add id="Mage2tv_Mod9::custom_menu_submenu"
+             title="Submenu Item"
+             module="Mage2tv_Mod9"
+             sortOrder="10"
+             action="mod9/index/displayoption"
+             parent="Mage2tv_Mod9::custom_menu"
+             resource="Mage2tv_Mod9::custom_menu_submenu"/>
+    </menu>
+</config>
