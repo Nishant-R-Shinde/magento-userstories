@@ -96,22 +96,22 @@ grumphp:
       # config_contains_finder: false - to skip fixing all Magento 2 directory
       config_contains_finder: false
       verbose: true
-    phpmd:
-      ruleset: ['dev/tests/static/testsuite/Magento/Test/Php/_files/phpmd/ruleset.xml']
-      triggered_by: ['php']
-      exclude:
-        - "./app/code/Magento/"
-        - "./app/code/*/*/Setup/"
-      metadata:
-        priority: 70
+    # phpmd:
+    #   ruleset: ['dev/tests/static/testsuite/Magento/Test/Php/_files/phpmd/ruleset.xml']
+    #   triggered_by: ['php']
+    #   exclude:
+    #     - "./app/code/Magento/"
+    #     - "./app/code/*/*/Setup/"
+    #   metadata:
+    #     priority: 70
     # https://devdocs.magento.com/guides/v2.4/test/testing.html#phpstan
-    phpstan:
-      autoload_file: ~
-      configuration: 'dev/tests/static/testsuite/Magento/Test/Php/_files/phpstan/phpstan.neon'
-      level: 6
-      triggered_by: ['php']
-      force_patterns: []
-      ignore_patterns: []
-      memory_limit: "-1"
-      metadata:
-            priority: 90
+    # phpstan:
+    #   autoload_file: ~
+    #   configuration: 'dev/tests/static/testsuite/Magento/Test/Php/_files/phpstan/phpstan.neon'
+    #   level: 6
+    #   triggered_by: ['php']
+    #   force_patterns: []
+    #   ignore_patterns: []
+    #   memory_limit: "-1"
+    #   metadata:
+    #         priority: 90

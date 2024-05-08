@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="console_log_store_info" class="Mage2tv\Userstory24\Block\Index" template="Mage2tv_Userstory24::consolelog.phtml" />
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,11 @@
+<div>
+    check the console for this page to get the information about store configurations
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Mage2tv_Userstory24/js/log-config": {"emailTemplate": <?= /* @noEscape */ json_encode($block->getSalesEmail()) ?>, "paymentMethods": <?= /* @noEscape */ json_encode($block->getPaymentMethods()) ?>}
+        }
+    }
+</script>
