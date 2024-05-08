@@ -1,0 +1,37 @@
+<?php
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \MagicToolbox\Magic360\Block\Adminhtml\Product\Helper\Form\Gallery\Content */
+$elementName = $block->getElement()->getName();
+?>
+<div id="<?= $block->getHtmlId() ?>"
+     class='gallery'
+     data-mage-init='{"MagicToolbox_Magic360/js/magic360-gallery-20x":{"template":"#<?= $block->getHtmlId() ?>-template"}}'
+     data-images="<?= $block->escapeHtml($block->getImagesJson()) ?>"
+    >
+    <?php if (!$block->getElement()->getReadonly()) { ?>
+        <div class="image image-placeholder">
+            <?= $block->getUploaderHtml(); ?>
+            <img class="spacer" src="<?= /* @escapeNotVerified */ $block->getViewFileUrl('images/spacer.gif')?>"/>
+            <p class="image-placeholder-text"><?= /* @escapeNotVerified */ __('Click here or drag and drop to add images.'); ?></p>
+        </div>
+    <?php } ?>
+    <script id="<?= $block->getHtmlId() ?>-template" type="text/x-magento-template">
+        <div class="image item" data-role="magic360image">
+            <input type="hidden" name="<?= /* @escapeNotVerified */ $elementName ?>[<%- data.file_id %>][position]" value="<%- data.position %>" class="position"/>
+            <input type="hidden" name="<?= /* @escapeNotVerified */ $elementName ?>[<%- data.file_id %>][file]" value="<%- data.file %>"/>
+            <input type="hidden" name="<?= /* @escapeNotVerified */ $elementName ?>[<%- data.file_id %>][id]" value="<%- data.id %>"/>
+            <input type="hidden" name="<?= /* @escapeNotVerified */ $elementName ?>[<%- data.file_id %>][removed]" value="" class="is-removed"/>
+            <input type="hidden" name="<?= /* @escapeNotVerified */ $elementName ?>[<%- data.file_id %>][name]" value="<%- data.name %>"/>
+            <img class="spacer" src="<?= /* @escapeNotVerified */ $block->getViewFileUrl('images/spacer.gif')?>"/>
+            <img class="product-image" src="<%- data.url %>" alt="<%- data.file %>"/>
+            <div class="actions" >
+                <button type="button" class="action-delete" data-role="delete-button" title="<?= /* @escapeNotVerified */ __('Delete image') ?>">
+                    <span> <?= /* @escapeNotVerified */ __('Delete image') ?></span >
+                </button>
+                <div class="draggable-handle" ></div >
+            </div >
+        </div>
+    </script>
+</div>

@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @var $block \Magento\Framework\View\Element\Template
+ */
+
+echo '<div class="product media">';
+
+echo $block->getParentBlock()->getChildHtml('product.info.media.magic360');
+
+echo $block->getParentBlock()->getChildHtml('product.info.media.spin');
+
+echo $block->getParentBlock()->getChildHtml('product.info.media.video');
+
+echo '</div>';

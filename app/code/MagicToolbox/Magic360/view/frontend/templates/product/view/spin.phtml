@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @var $block \Magento\Framework\View\Element\Template
+ */
+
+$magic360Block = $block->getLayout()->createBlock('\MagicToolbox\Magic360\Block\Product\View\Gallery');
+
+if ($magic360Block) {
+    if ($magic360Block->isEffectEnabled() && $magic360Block->isStandaloneMode()) {
+        echo $magic360Block->getSpinHtml();
+    }
+}
