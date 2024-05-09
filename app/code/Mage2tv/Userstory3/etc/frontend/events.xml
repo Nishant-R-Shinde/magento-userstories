@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="catalog_controller_product_view">
+        <observer name="Mage2tv_Userstory3_product_view_observer" instance="Mage2tv\Userstory3\Observer\ProductViewObserver" />
+    </event>
+</config>
